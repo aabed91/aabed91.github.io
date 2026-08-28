@@ -97,7 +97,7 @@
 <!-- ══════════════════════════ ARABIC ══════════════════════════ -->
 <section id="ar">
   <h1>سياسة الخصوصية</h1>
-  <p class="updated">تطبيق «قبل ولا بعد» · آخر تحديث: [التاريخ]</p>
+  <p class="updated">تطبيق «قبل ولا بعد» · آخر تحديث: ٢٨ أغسطس ٢٠٢٦</p>
 
   <div class="card">
     <p><strong>باختصار:</strong> اللعبة لا تطلب منك اسمًا ولا بريدًا إلكترونيًا ولا
@@ -106,7 +106,7 @@
   </div>
 
   <h2>١. من نحن</h2>
-  <p>«قبل ولا بعد» لعبة ترتيب زمني تصدر عن <strong>[اسم الجهة المالكة]</strong>
+  <p>«قبل ولا بعد» لعبة ترتيب زمني تصدر عن <strong>أحمد عابد</strong>
   («نحن»). تشرح هذه السياسة ما نجمعه، ولماذا، وما الذي يمكنك فعله حياله.</p>
 
   <h2>٢. ما لا نجمعه</h2>
@@ -218,13 +218,13 @@
   التغيير يمسّ ما نجمعه.</p>
 
   <h2>١٥. التواصل</h2>
-  <p>للأسئلة أو طلبات الحذف: <a href="mailto:[البريد الإلكتروني]">[البريد الإلكتروني]</a></p>
+  <p>للأسئلة أو طلبات الحذف: <a href="mailto:aabed91@gmail.com">aabed91@gmail.com</a></p>
 </section>
 
 <!-- ══════════════════════════ ENGLISH ══════════════════════════ -->
 <section id="en" hidden>
   <h1>Privacy Policy</h1>
-  <p class="updated">Before or After · Last updated: [date]</p>
+  <p class="updated">Before or After · Last updated: 28 August 2026</p>
 
   <div class="card">
     <p><strong>The short version:</strong> the game never asks for your name,
@@ -234,7 +234,7 @@
 
   <h2>1. Who we are</h2>
   <p>Before or After is a chronological-ordering game published by
-  <strong>[legal entity name]</strong> ("we"). This policy explains what we
+  <strong>Ahmed Abed</strong> ("we"). This policy explains what we
   collect, why, and what you can do about it.</p>
 
   <h2>2. What we do not collect</h2>
@@ -361,7 +361,7 @@
 
   <h2>15. Contact</h2>
   <p>Questions or deletion requests:
-  <a href="mailto:[contact email]">[contact email]</a></p>
+  <a href="mailto:aabed91@gmail.com">aabed91@gmail.com</a></p>
 </section>
 
 <footer>
@@ -385,14 +385,14 @@
       bEn.setAttribute('aria-pressed', String(!isAr));
       document.documentElement.lang = lang;
       document.documentElement.dir = isAr ? 'rtl' : 'ltr';
-      try { localStorage.setItem('privacy-lang', lang); } catch (e) {}
+      try { localStorage.setItem('legal-lang', lang); } catch (e) {}
     }
 
     bAr.addEventListener('click', function () { show('ar'); });
     bEn.addEventListener('click', function () { show('en'); });
 
     var saved = null;
-    try { saved = localStorage.getItem('privacy-lang'); } catch (e) {}
+    try { saved = localStorage.getItem('legal-lang'); } catch (e) {}
 
     if (saved === 'ar' || saved === 'en') {
       show(saved);
