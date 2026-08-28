@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية — قبل ولا بعد</title>
+<style>
+  :root {
+    --bg: #F7F4EF;
+    --surface: #FFFFFF;
+    --text: #1F2328;
+    --muted: #5C6470;
+    --accent: #D98200;
+    --border: #E4DFD6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171A;
+      --surface: #1D2125;
+      --text: #ECEEF0;
+      --muted: #A2ABB5;
+      --accent: #E79A2B;
+      --border: #2C3238;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.3; margin: 0 0 .25rem; }
+  h2 { font-size: 1.2rem; margin: 2.5rem 0 .5rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  a { color: var(--accent); }
+  ul { padding-inline-start: 1.25rem; }
+  li { margin: .35rem 0; }
+  code {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: .25rem;
+    padding: .1rem .35rem;
+    font-size: .9em;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .card p:first-child { margin-top: 0; }
+  .card p:last-child { margin-bottom: 0; }
+  .toggle {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+  }
+  .toggle button {
+    font: inherit;
+    font-size: .9rem;
+    padding: .4rem .9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .toggle button[aria-pressed="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #1F2328;
+    font-weight: 600;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: start; padding: .55rem .5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  [hidden] { display: none !important; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+
+<div class="toggle">
+  <button id="btn-ar" aria-pressed="true">العربية</button>
+  <button id="btn-en" aria-pressed="false">English</button>
+</div>
+
+<!-- ══════════════════════════ ARABIC ══════════════════════════ -->
+<section id="ar">
+  <h1>سياسة الخصوصية</h1>
+  <p class="updated">تطبيق «قبل ولا بعد» · آخر تحديث: [التاريخ]</p>
+
+  <div class="card">
+    <p><strong>باختصار:</strong> اللعبة لا تطلب منك اسمًا ولا بريدًا إلكترونيًا ولا
+    حسابًا. لا نعرف من أنت. ما يُرسل إلى خوادمنا هو تقدّمك في اللعبة فقط، مرتبطًا
+    برقم عشوائي أنشأه جهازك.</p>
+  </div>
+
+  <h2>١. من نحن</h2>
+  <p>«قبل ولا بعد» لعبة ترتيب زمني تصدر عن <strong>[اسم الجهة المالكة]</strong>
+  («نحن»). تشرح هذه السياسة ما نجمعه، ولماذا، وما الذي يمكنك فعله حياله.</p>
+
+  <h2>٢. ما لا نجمعه</h2>
+  <p>لا نطلب ولا نخزّن أيًّا مما يلي، ولا يوجد في التطبيق مكان لإدخالها:</p>
+  <ul>
+    <li>الاسم أو البريد الإلكتروني أو رقم الهاتف</li>
+    <li>جهات الاتصال أو الصور أو الملفات</li>
+    <li>الموقع الجغرافي</li>
+    <li>بيانات الدفع — عمليات الشراء تتم داخل متجر آبل أو جوجل ولا يرى التطبيق تفاصيل بطاقتك</li>
+  </ul>
+  <p>لا يوجد تسجيل دخول. يُنشئ التطبيق <strong>هوية مجهولة</strong> عبر Firebase
+  Authentication: رقم عشوائي لا يرتبط بك ولا ببريدك ولا بأي حساب.</p>
+
+  <h2>٣. ما يبقى على جهازك</h2>
+  <p>تُحفظ هذه البيانات محليًا ولا تغادر جهازك:</p>
+  <ul>
+    <li>اللغة والمظهر والصوت والاهتزاز وإعدادات التنبيهات</li>
+    <li>موافقتك على الإعلانات</li>
+    <li>نسخة محلية من تقدّمك، لتعمل اللعبة دون اتصال</li>
+  </ul>
+
+  <h2>٤. ما يُرسل إلى خوادمنا</h2>
+  <p>نستخدم Cloud Firestore من Google لمزامنة تقدّمك بين أجهزتك. المرتبط برقمك
+  العشوائي هو:</p>
+  <table>
+    <tr><th>البيانات</th><th>لماذا</th></tr>
+    <tr><td>التقدّم في الحملة والمستويات والنجوم</td><td>ألّا تفقد تقدّمك</td></tr>
+    <tr><td>سجل التحدي اليومي وسلسلة الأيام</td><td>احتساب السلسلة</td></tr>
+    <tr><td>البطاقات المكتشفة والمتقنة</td><td>مجموعتك</td></tr>
+    <tr><td>الإحصائيات ورصيد التلميحات</td><td>عرض أرقامك</td></tr>
+  </table>
+  <p><strong>الإعدادات لا تُزامَن عمدًا</strong> — لغتك ومظهرك يخصّان الجهاز لا اللاعب.</p>
+
+  <h3>التحدي اليومي</h3>
+  <p>عند إنهاء التحدي اليومي نرسل <strong>ترتيبك والزمن المستغرق وعدد التلميحات</strong>
+  فقط. النتيجة تُحسب على الخادم لا على جهازك، لأن لوحة صدارة لا يمكن الوثوق بها
+  أسوأ من عدم وجودها. لا يُرسل اسم ولا أي معرّف شخصي.</p>
+
+  <h3>الإبلاغ عن تاريخ خاطئ</h3>
+  <p>إذا أبلغت عن حدث، نستقبل معرّف الحدث ولغة الواجهة وملاحظتك (٥٠٠ حرف كحد أقصى)
+  ورقمك العشوائي. <strong>لا تكتب في الملاحظة أي معلومات شخصية</strong> — الحقل
+  مخصّص للتاريخ لا لك.</p>
+
+  <h2>٥. التحليلات وتقارير الأعطال</h2>
+  <p>نستخدم <strong>Firebase Analytics</strong> لفهم كيف تُلعب اللعبة: بدء جولة
+  وإنهاؤها، الوضع المختار، استخدام التلميحات، التحدي اليومي والسلسلة، ومشاهدة
+  الإعلانات وعمليات الشراء. هذه أحداث عن اللعب لا عنك.</p>
+  <p>ونستخدم <strong>Firebase Crashlytics</strong> لتلقّي تقارير الأعطال، وتتضمن
+  حالة الجهاز ونوعه وإصدار النظام ومسار الخطأ، مرتبطة برقمك العشوائي كي نعرف أن
+  عطلًا واحدًا تكرّر مع لاعب واحد.</p>
+  <p>تجمع Google في الحالتين معلومات عن الجهاز ومعرّفات إعلانية وفق سياساتها.</p>
+
+  <h2>٦. الإعلانات</h2>
+  <p>تعرض النسخة المجانية إعلانات عبر <strong>Google AdMob</strong>.</p>
+  <ul>
+    <li>قبل أول طلب إعلان نعرض عليك <strong>نموذج الموافقة</strong> (Google UMP).
+    اختيارك هو ما يحدّد إن كانت الإعلانات مخصّصة أم لا، ويمكنك تغييره لاحقًا من
+    الإعدادات حيث يتيح ذلك نظامك ومنطقتك.</li>
+    <li>الإعلانات التي تكافئك <strong>اختيارية دائمًا</strong>: نخبرك بالمكافأة قبل
+    تحميل الإعلان، ولا يبدأ أي إعلان من تلقاء نفسه.</li>
+    <li>قد تستخدم AdMob <strong>معرّف الإعلان</strong> الخاص بجهازك. على iOS لا
+    يطلب التطبيق حاليًا إذن التتبّع، وبالتالي تكون الإعلانات غير مخصّصة هناك.</li>
+    <li>شراء «إزالة الإعلانات» يوقف إعلانات البانر والإعلانات البينية. تبقى
+    الإعلانات التي تكافئك متاحة لأنها اختيارية وتمنحك تلميحات.</li>
+  </ul>
+
+  <h2>٧. عمليات الشراء</h2>
+  <p>يتم الشراء والاسترجاع داخل App Store أو Google Play. نتلقّى من المتجر ما يفيد
+  بأن الشراء تم فقط. <strong>لا نرى ولا نخزّن أي بيانات دفع.</strong></p>
+
+  <h2>٨. التنبيهات</h2>
+  <p>التنبيهات <strong>محلية بالكامل</strong>: يجدولها جهازك ولا يرسلها خادم، ولا
+  نعرف إن وصلتك أو فتحتها. يمكنك إيقافها من الإعدادات أو من نظام التشغيل.</p>
+
+  <h2>٩. المشاركة</h2>
+  <p>عند اختيارك المشاركة نمرّر <strong>أرقامًا فقط</strong> — عدد الإجابات الصحيحة
+  والمجموع وطول السلسلة — إلى التطبيق الذي تختاره. لا تُشارك الأحداث ولا إجاباتها
+  أبدًا، حتى لا نُفسد اللغز على من يستقبل الرسالة.</p>
+
+  <h2>١٠. الأطفال</h2>
+  <p>هذا التطبيق <strong>غير موجّه للأطفال</strong> ولا نجمع عن قصد بيانات ممن هم
+  دون السن التي يحدّدها قانون بلدك. إن كنت وليّ أمر وتعتقد أن طفلك زوّدنا ببيانات،
+  راسلنا لنحذفها.</p>
+
+  <h2>١١. حقوقك</h2>
+  <p>وفق لوائح مثل GDPR الأوروبية وCCPA في كاليفورنيا، لك حق الاطّلاع على بياناتك
+  وتصحيحها وحذفها والاعتراض على معالجتها.</p>
+  <div class="card">
+    <p><strong>ملاحظة مهمة عن الحذف:</strong> لأن هويتك مجهولة، لا نستطيع الربط
+    بينك وبين بياناتك من بريد إلكتروني. لطلب الحذف نحتاج منك
+    <strong>المعرّف العشوائي</strong> الظاهر في «الإعدادات».</p>
+    <p>حذف التطبيق يمسح النسخة المحلية فورًا، لكنه <strong>لا يمسح</strong> النسخة
+    السحابية؛ راسلنا لحذفها.</p>
+  </div>
+
+  <h2>١٢. مدة الاحتفاظ</h2>
+  <p>نحتفظ ببيانات التقدّم ما دامت اللعبة مثبتة لديك، وبنتائج التحدي اليومي
+  ولوحات الصدارة لأنها سجل تنافسي. تُحذف جميعها عند تنفيذ طلب حذف.</p>
+
+  <h2>١٣. أطراف ثالثة</h2>
+  <ul>
+    <li>Google Firebase — <a href="https://firebase.google.com/support/privacy">سياسة الخصوصية</a></li>
+    <li>Google AdMob — <a href="https://policies.google.com/technologies/ads">كيف تستخدم Google بياناتك في الإعلانات</a></li>
+    <li>Apple App Store / Google Play — سياسة كل متجر بشأن الشراء</li>
+  </ul>
+
+  <h2>١٤. تغييرات هذه السياسة</h2>
+  <p>عند تغيّر جوهري سنحدّث هذه الصفحة وتاريخها، وسننبّه داخل التطبيق إن كان
+  التغيير يمسّ ما نجمعه.</p>
+
+  <h2>١٥. التواصل</h2>
+  <p>للأسئلة أو طلبات الحذف: <a href="mailto:[البريد الإلكتروني]">[البريد الإلكتروني]</a></p>
+</section>
+
+<!-- ══════════════════════════ ENGLISH ══════════════════════════ -->
+<section id="en" hidden>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Before or After · Last updated: [date]</p>
+
+  <div class="card">
+    <p><strong>The short version:</strong> the game never asks for your name,
+    your email, or an account. We do not know who you are. What reaches our
+    servers is your game progress, tied to a random number your device made up.</p>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Before or After is a chronological-ordering game published by
+  <strong>[legal entity name]</strong> ("we"). This policy explains what we
+  collect, why, and what you can do about it.</p>
+
+  <h2>2. What we do not collect</h2>
+  <p>We never ask for or store any of the following. There is nowhere in the
+  app to enter them:</p>
+  <ul>
+    <li>Name, email address, or phone number</li>
+    <li>Contacts, photos, or files</li>
+    <li>Location</li>
+    <li>Payment details — purchases happen inside the App Store or Google Play, and the app never sees your card</li>
+  </ul>
+  <p>There is no sign-in. The app creates an <strong>anonymous identity</strong>
+  through Firebase Authentication: a random id that is not linked to you, your
+  email, or any account.</p>
+
+  <h2>3. What stays on your device</h2>
+  <p>This is stored locally and never leaves your device:</p>
+  <ul>
+    <li>Language, theme, sound, haptics, and notification preferences</li>
+    <li>Your advertising consent choice</li>
+    <li>A local copy of your progress, so the game works offline</li>
+  </ul>
+
+  <h2>4. What is sent to our servers</h2>
+  <p>We use Google Cloud Firestore to sync your progress across your own
+  devices. Tied to your random id:</p>
+  <table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Campaign progress, levels, stars</td><td>So you do not lose progress</td></tr>
+    <tr><td>Daily challenge history and streak</td><td>To count the streak</td></tr>
+    <tr><td>Discovered and mastered cards</td><td>Your collection</td></tr>
+    <tr><td>Statistics and hint balance</td><td>To show your numbers</td></tr>
+  </table>
+  <p><strong>Settings are deliberately not synced</strong> — your language and
+  theme belong to a device, not to a player.</p>
+
+  <h3>The daily challenge</h3>
+  <p>When you finish the daily we send <strong>your arrangement, how long you
+  took, and how many hints you used</strong> — nothing else. The score is
+  calculated on the server rather than on your device, because a leaderboard
+  you cannot trust is worse than none. No name or personal identifier is sent.</p>
+
+  <h3>Reporting a wrong date</h3>
+  <p>If you report an event we receive the event id, your interface language,
+  your note (500 characters maximum), and your random id.
+  <strong>Please do not put personal information in the note</strong> — the
+  field is about the date, not about you.</p>
+
+  <h2>5. Analytics and crash reports</h2>
+  <p>We use <strong>Firebase Analytics</strong> to understand how the game is
+  played: rounds started and finished, mode chosen, hints used, daily challenge
+  and streak activity, ads seen, and purchases. These are events about
+  gameplay, not about you.</p>
+  <p>We use <strong>Firebase Crashlytics</strong> to receive crash reports.
+  These include device model, operating system version, device state, and the
+  error trace, tied to your random id so we can tell that one crash happened
+  repeatedly to one player.</p>
+  <p>In both cases Google collects device information and advertising
+  identifiers under its own policies.</p>
+
+  <h2>6. Advertising</h2>
+  <p>The free version shows ads through <strong>Google AdMob</strong>.</p>
+  <ul>
+    <li>Before the first ad request we show you a <strong>consent form</strong>
+    (Google UMP). Your choice decides whether ads are personalised, and you can
+    change it later in Settings where your region and platform allow.</li>
+    <li>Rewarded ads are <strong>always opt-in</strong>: we tell you the reward
+    before the ad loads, and no ad ever plays by itself.</li>
+    <li>AdMob may use your device's <strong>advertising identifier</strong>. On
+    iOS the app does not currently request tracking permission, so ads there
+    are non-personalised.</li>
+    <li>Buying Remove Ads stops banner and interstitial ads. Rewarded ads
+    remain available, because they are opt-in and grant hints.</li>
+  </ul>
+
+  <h2>7. Purchases</h2>
+  <p>Purchases and restores happen inside the App Store or Google Play. We
+  receive only confirmation that a purchase completed.
+  <strong>We never see or store payment data.</strong></p>
+
+  <h2>8. Notifications</h2>
+  <p>Notifications are <strong>entirely local</strong>: your device schedules
+  them, no server sends them, and we do not know whether one arrived or was
+  opened. You can turn them off in Settings or in your operating system.</p>
+
+  <h2>9. Sharing</h2>
+  <p>When you choose to share, we pass <strong>counts only</strong> — how many
+  you got right, out of how many, and your streak length — to whichever app you
+  pick. The events and their answers are never shared, so the puzzle is not
+  spoiled for whoever receives it.</p>
+
+  <h2>10. Children</h2>
+  <p>This app is <strong>not directed at children</strong> and we do not
+  knowingly collect data from anyone under the age set by your country's law.
+  If you are a parent and believe your child has provided us with data, contact
+  us and we will delete it.</p>
+
+  <h2>11. Your rights</h2>
+  <p>Under regulations such as the EU GDPR and California's CCPA, you have the
+  right to access, correct, delete, and object to the processing of your data.</p>
+  <div class="card">
+    <p><strong>An important note about deletion:</strong> because your identity
+    is anonymous, we cannot match you to your data from an email address. To
+    request deletion we need the <strong>random id</strong> shown in Settings.</p>
+    <p>Deleting the app clears the local copy immediately, but does
+    <strong>not</strong> clear the cloud copy — contact us for that.</p>
+  </div>
+
+  <h2>12. Retention</h2>
+  <p>We keep progress data for as long as the game is installed, and daily
+  challenge results and leaderboard entries as a competitive record. All of it
+  is removed when a deletion request is carried out.</p>
+
+  <h2>13. Third parties</h2>
+  <ul>
+    <li>Google Firebase — <a href="https://firebase.google.com/support/privacy">privacy policy</a></li>
+    <li>Google AdMob — <a href="https://policies.google.com/technologies/ads">how Google uses data in advertising</a></li>
+    <li>Apple App Store / Google Play — each store's own purchase policy</li>
+  </ul>
+
+  <h2>14. Changes to this policy</h2>
+  <p>If something material changes we will update this page and its date, and
+  we will say so in the app when the change affects what we collect.</p>
+
+  <h2>15. Contact</h2>
+  <p>Questions or deletion requests:
+  <a href="mailto:[contact email]">[contact email]</a></p>
+</section>
+
+<footer>
+  <p>Before or After · قبل ولا بعد</p>
+</footer>
+
+</main>
+
+<script>
+  (function () {
+    var ar = document.getElementById('ar');
+    var en = document.getElementById('en');
+    var bAr = document.getElementById('btn-ar');
+    var bEn = document.getElementById('btn-en');
+
+    function show(lang) {
+      var isAr = lang === 'ar';
+      ar.hidden = !isAr;
+      en.hidden = isAr;
+      bAr.setAttribute('aria-pressed', String(isAr));
+      bEn.setAttribute('aria-pressed', String(!isAr));
+      document.documentElement.lang = lang;
+      document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+      try { localStorage.setItem('privacy-lang', lang); } catch (e) {}
+    }
+
+    bAr.addEventListener('click', function () { show('ar'); });
+    bEn.addEventListener('click', function () { show('en'); });
+
+    var saved = null;
+    try { saved = localStorage.getItem('privacy-lang'); } catch (e) {}
+
+    if (saved === 'ar' || saved === 'en') {
+      show(saved);
+    } else {
+      // Arabic is the primary market, so it is the default and English is the
+      // exception — not the other way round.
+      var browser = (navigator.language || '').slice(0, 2).toLowerCase();
+      show(browser === 'en' ? 'en' : 'ar');
+    }
+  })();
+</script>
+</body>
+</html>
